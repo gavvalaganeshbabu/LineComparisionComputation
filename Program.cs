@@ -7,6 +7,9 @@ namespace LineComparisionComputation
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Line Comparision Computation :");
+            PerformCompareTo();
+        }
+        public static void PerformCompareTo() {
             Console.WriteLine("Calculating the Length of a Lines are Equal Or Not :");
             Console.WriteLine("Enter the Cooradinates of First Line  (x1,y1) and (x2,y2) ");
             double x1 = double.Parse(Console.ReadLine());
@@ -20,17 +23,18 @@ namespace LineComparisionComputation
             double x4 = double.Parse(Console.ReadLine());
             double y4 = double.Parse(Console.ReadLine());
             double SecondLineLength = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
-            int compareValue=FirstLineLength.CompareTo(SecondLineLength);
-            if (compareValue>0)
+            int compareValue = FirstLineLength.CompareTo(SecondLineLength);
+            if (compareValue > 0)
             {
                 Console.WriteLine("First Line is Greateer Than Second Line  ");
             }
-            else if(compareValue<0) 
+            else if (compareValue < 0)
             {
                 Console.WriteLine("Second Line is Greater than First Line ");
             }
-            else {
-                Console.WriteLine("Two Line Length are Equal  "); 
+            else
+            {
+                Console.WriteLine("Two Line Length are Equal  ");
             }
         }
     }
