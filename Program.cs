@@ -20,11 +20,12 @@ namespace LineComparisionComputation
             double x4 = double.Parse(Console.ReadLine());
             double y4 = double.Parse(Console.ReadLine());
             double SecondLineLength = Math.Sqrt(Math.Pow((x4 - x3), 2) + Math.Pow((y4 - y3), 2));
-            bool x=(FirstLineLength==SecondLineLength);
-            if (x == true) { Console.WriteLine("Two Line Length are Equal  "); }
-            else { Console.WriteLine("Two Lines are Not Equal :"); }
-
-
+            
+            if (FirstLineLength.Equals(SecondLineLength)) {
+                Console.WriteLine("Two Line Length are Equal  "); }
+            else {
+                Console.WriteLine("Two Lines are Not Equal :"); 
+            }
         }
     }
 }
